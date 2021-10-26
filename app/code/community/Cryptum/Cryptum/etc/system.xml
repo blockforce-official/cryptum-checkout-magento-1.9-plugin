@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <payment>
+            <groups>
+                <Cryptum translate="label" module="paygate">
+                    <label>Cryptum</label>
+                    <sort_order>700</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment></comment>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <comment>Enable/Disable</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+
+                        <title translate="label">
+                            <label>Title</label>
+                            <comment>This controls the title which the user sees during checkout.</comment>                            
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+
+                        <merchant_id translate="label">
+                            <label>Store Id</label>
+                            <comment>Enter your Cryptum Checkout Store ID (Automatically Generated in Cryptum Dashboard</comment>                            
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </merchant_id>
+
+                        <app_id translate="label">
+                            <label>Api Key</label>
+                            <comment>Enter your Cryptum API Key (Generated in Cryptum Dashboard, API Keys Section)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </app_id>
+                        <environment translate="label">
+                            <label>Production</label>
+                            <comment>Choose your environment. The Test environment should be used for testing only.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>                    
+                        </environment>
+                        <store_markup_percentage translate="label">
+                            <label>Store Markup Percentage</label>
+                            <comment>Enter your percentage markup value</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>                    
+                        </store_markup_percentage>
+                        <store_discount_percentage translate="label">
+                            <label>Store Discount Percentage</label>
+                            <comment>Enter your percentage discount value</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>                    
+                        </store_discount_percentage>                        
+                    </fields>
+                </Cryptum>
+            </groups>
+        </payment>
+    </sections>
+</config>

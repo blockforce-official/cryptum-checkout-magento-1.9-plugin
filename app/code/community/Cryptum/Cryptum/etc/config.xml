@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cryptum_Cryptum>
+            <version>1.0</version>
+        </Cryptum_Cryptum>
+    </modules>
+    <frontend>
+        <routers>
+            <cryptum>
+                <use>standard</use>
+                <args>
+                    <module>Cryptum_Cryptum</module>
+                    <frontName>cryptum</frontName>
+                </args>
+            </cryptum>
+        </routers>
+    </frontend>
+    <global>
+        <blocks>
+            <checkout>
+                <rewrite>
+                    <cart_totals>Cryptum_Cryptum_Block_LastPayment</cart_totals>
+                </rewrite>
+            </checkout>
+        </blocks>
+
+        <models>
+            <Cryptum>
+                <class>Cryptum_Cryptum_Model</class>
+            </Cryptum>
+        </models>
+
+        <resources>
+            <Cryptum_setup>
+                <setup>
+                    <module>Cryptum_Cryptum</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </Cryptum_setup>
+            <Cryptum_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </Cryptum_write>
+            <Cryptum_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </Cryptum_read>
+        </resources>
+    </global>
+
+    <default>
+        <payment>
+            <Cryptum>
+                <active>1</active>
+                <model>Cryptum/paymentMethod</model>
+                <title>Cryptum Checkout</title>
+                <payment_action>authorize</payment_action>
+                <callback_secret>generate</callback_secret>
+                
+            </Cryptum>
+        </payment>
+    </default>
+</config>

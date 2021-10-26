@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cryptum_Cryptum>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Cryptum_Cryptum>
+    </modules>
+</config>
